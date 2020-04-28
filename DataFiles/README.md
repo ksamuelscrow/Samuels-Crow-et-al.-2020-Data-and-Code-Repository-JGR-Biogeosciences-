@@ -1,6 +1,18 @@
 # Data Files
 
 Data needed to reproduce SAM results from the manuscript.
+<br/>**Y-variable and Indexing Files:**<br/>
+These files include the flux of interest for the growing season along with the line numbers that link the growing season flux data with the growing season covariate data.
+<br/>
+**Mpj_YVar.csv** (pinyon-juniper woodland)<br/>
+**Vcp_YVar.csv** (ponderosa pine forest)
+<br/>
+<br/>
+|Covariate Name|Column Number|Explanation|
+| ------------ | ----------- |---------- |
+|ET|1|Daytime ET (mm)|
+|NEE|2|Carbon Flux (gC m^-2 d^-1)|
+|dayind|3|Row Number of the Simultaneous Covariate Data in the Covariate Data file|
 
 **Covariate Data Files:**<br/>
 These files contain date information, flux measurements, and climate covariates for both sites (US-Mpj and US-Vcp). The data in these files include the entire data set available from the sites at the daily timestep to accommodate the need for antecedent variables.<br/>
@@ -21,15 +33,4 @@ These files contain date information, flux measurements, and climate covariates 
 |VPD_F_min|8|Minimum Vapor Pressure Deficit (kPa)|
 |VPD_F_max|9|Maximum Vapor Pressure Deficit (kPa)|
 <br/>
-<br/>**Y-variable and Indexing Files:**<br/>
-These files include the flux of interest for the growing season along with the line numbers that link the growing season flux data with the growing season covariate data.
-<br/>
-**Mpj_YVar.csv** (pinyon-juniper woodland)<br/>
-**Vcp_YVar.csv** (ponderosa pine forest)
-<br/>
-<br/>
-|Covariate Name|Column Number|Explanation|
-| ------------ | ----------- |---------- |
-|ET|1|Daytime ET (mm)|
-|NEE|2|Carbon Flux (gC m^-2 d^-1)|
-|dayind|3|Row Number of the Simultaneous Covariate Data in the Covariate Data file|
+
