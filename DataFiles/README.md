@@ -3,7 +3,7 @@
 Data needed to reproduce SAM results from the manuscript.
 <br/><br/>**Y-variable and Indexing Files:**<br/><br/>
 These files include the flux of interest for the growing season along with the line numbers that link the growing season flux data with the growing season covariate data.
-<br/>
+<br/><br/>
 **Mpj_YVar.csv** (pinyon-juniper woodland)<br/>
 **Vcp_YVar.csv** (ponderosa pine forest)
 <br/>
