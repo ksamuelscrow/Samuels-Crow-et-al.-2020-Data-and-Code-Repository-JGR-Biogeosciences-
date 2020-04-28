@@ -1,6 +1,6 @@
 # Atmosphere-Soil Interactions Govern Ecosystem Flux Sensitivity to Environmental Conditions in Semiarid Woody Ecosystems over Varying Timescales 
 
-## Script and Data Repository
+## Model Code and Data Repository
 
 **Author Names:** Kimberly E. Samuels-Crow, Kiona Ogle, Marcy E. Litvak
 
