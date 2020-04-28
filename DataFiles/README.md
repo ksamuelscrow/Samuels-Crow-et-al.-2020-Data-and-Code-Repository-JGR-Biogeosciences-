@@ -22,10 +22,4 @@ These files contain date information, flux measurements, and climate covariates 
 |VPD_F_max|9|Maximum Vapor Pressure Deficit (kPa)|
 <br/>
 <br/>
-**Y-variable and Indexing Files:**<br/>
-These files include the flux of interest for the growing season along with the line numbers that link the growing season flux data with the growing season covariate data.
-<br/>
-<br/>
-|Covariate Name|Column Number|Explanation|
-| ------------ | ----------- |---------- |
-|
+
