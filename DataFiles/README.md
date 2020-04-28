@@ -19,4 +19,4 @@ These files contain date information, flux measurements, and climate covariates 
 |deep_swc_interp|6|Deep Soil Moisture (v/v)|
 |PAR|7|Photosynthetically Active Radiation|
 |VPD_F_min|8|Minimum Vapor Pressure Deficit (kPa)|
-|VPD_F_max|8|Maximum Vapor Pressure Deficit (kPa)|
+|VPD_F_max|9|Maximum Vapor Pressure Deficit (kPa)|
