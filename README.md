@@ -1,15 +1,8 @@
-# Script and Data Repository
+# Atmosphere-Soil Interactions Govern Ecosystem Flux Sensitivity to Environmental Conditions in Semiarid Woody Ecosystems over Varying Timescales 
 
-Atmosphere-Soil Interactions Govern Ecosystem Flux Sensitivity to Environmental Conditions in Semiarid Woody Ecosystems over Varying Timescales
+## Script and Data Repository
 
-Kimberly E. Samuels-Crow1, Kiona Ogle1,2,3, Marcy E. Litvak4
-
-(1) School of Informatics, Computing, and Cyber Systems, Northern Arizona University, Flagstaff, AZ, USA;
-(2) Department of Biological Sciences, Northern Arizona University, Flagstaff, AZ, USA;
-(3) Center of Ecosystem Science and Society, Northern Arizona University, Flagstaff, AZ, USA;
-(4) Department of Biology, University of New Mexico, Albuquerque, NM, USA
-
-
+**Author Names:** Kimberly E. Samuels-Crow, Kiona Ogle, Marcy E. Litvak
 
 This repository contains model code and data files used for the analysis presented in the manuscript.
 
