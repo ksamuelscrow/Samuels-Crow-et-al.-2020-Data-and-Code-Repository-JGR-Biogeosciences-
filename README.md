@@ -4,7 +4,7 @@
 
 **Author Names:** Kimberly E. Samuels-Crow, Kiona Ogle, Marcy E. Litvak
 
-This repository contains model code and data files used for the analysis presented in the manuscript.
+This repository contains model code and data files used for the analysis presented in "Atmosphere-Soil Interactions Govern Ecosystem Flux Sensitivity to Environmental Conditions in Semiarid Woody Ecosystems over Varying Timescales" (JGR-Biogeosciences, 2020).
 
 **ModelCode:** 
 Contains script for initializing and running the Stochastic Antecedent (SAM) model and the model code for the SAM model.
