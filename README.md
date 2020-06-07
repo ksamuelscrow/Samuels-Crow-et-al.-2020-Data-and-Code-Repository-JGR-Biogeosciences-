@@ -11,3 +11,6 @@ Contains script for initializing and running the Stochastic Antecedent (SAM) mod
 
 **DataFiles:**
 Data files with fluxes and covariate data (daily timestep) from the sites included in this study. The raw 30-minute data files are available for download from the Ameriflux website (https://ameriflux.lbl.gov/data/download-data/).
+
+
+[![DOI](https://zenodo.org/badge/207680389.svg)](https://zenodo.org/badge/latestdoi/207680389)
