@@ -36,7 +36,8 @@ model{
   }
   
   
-  #Priors for importance weights for each covariate (imposes Dirichlet(1) priors):  for(j in 1:Nlag){
+  #Priors for importance weights for each covariate (imposes Dirichlet(1) priors):
+  for(j in 1:Nlag){
   dV[j]    ~ dgamma(1,1)
   dT[j]    ~ dgamma(1,1)
   dSs[j]   ~ dgamma(1,1)
@@ -48,9 +49,7 @@ model{
   wSs[j]   <- dSs[j]/sum(dSs[])
   wSd[j]   <- dSd[j]/sum(dSd[])
   wVrng[j] <- dVrng[j]/sum(dVrng[])
-  
-  
-}
+  }
 
 #Priors for importance weights for precipitation:
 
