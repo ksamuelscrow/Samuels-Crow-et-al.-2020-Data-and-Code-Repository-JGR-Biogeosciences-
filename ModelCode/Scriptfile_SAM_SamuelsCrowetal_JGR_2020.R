@@ -45,7 +45,7 @@ Nj <- 10
 jIND <- read.csv("./DataFiles/InteractionIND.csv") ## This file (see E.1, below) provides indices to calculate interactions between covariates
 
 #-------------------------------------------------------------------#
-Nstart = 1  ## Choose the starting index. This is an index for a row in the Y data file. The value in the indexed row should be greater than 1 to accommodate calculation of antecedent values.
+Nstart = 168  ## Choose the starting index. This is an index for a row in the Y data file. The value in the indexed row should be greater than 1 to accommodate calculation of antecedent values.
 Nend   = nrow(YIN)  ## Choose the ending index. 
 Yday = YIN[, 3] ## Choose column in YIN that provides indices linking response variables with covariates
 #-------------------------------------------------------------------#
@@ -114,7 +114,7 @@ n.adapt = 100 # adjust this number (and n.iter) as appropriate
 n.iter = 1000
 n.chains = 3
 
-jm1.b=jags.model("./ModelCode/Scriptfile_SAM_SamuelsCrowetal_JGR_2020.R",
+jm1.b=jags.model("./ModelCode/JAGSModel_SAM_SamuelsCrowetal_JGR_2020.R",
                  data=data,
                  n.chains = n.chains,
                  n.adapt = n.adapt,
