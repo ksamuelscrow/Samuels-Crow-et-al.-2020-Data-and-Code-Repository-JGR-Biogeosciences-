@@ -114,12 +114,13 @@ n.adapt = 100 # adjust this number (and n.iter) as appropriate
 n.iter = 1000
 n.chains = 3
 
+start.time <- Sys.time()
 jm1.b=jags.model("./ModelCode/JAGSModel_SAM_SamuelsCrowetal_JGR_2020.R",
                  data=data,
                  n.chains = n.chains,
                  n.adapt = n.adapt,
                  inits = inits)
-
+Sys.time() - start.time
 #-------------------------------------------------------------------#
 
 #Part 3: Run JAGS Model
@@ -130,21 +131,27 @@ load.module("dic")
 ### below before monitoring dYdX (zc1dYdX), Xant (zc1X), or Y (zc1Y)
 
 n.iter = 40000
-
+start.time <- Sys.time()
 zc1 = coda.samples(jm1.b,
                    variable.names = c("deviance","beta0","beta1","beta1a","beta2", "wT","wV","wP","wSs","wSd","wP.weekly","wP.monthly",'wVrng', "sig"),
                    n.iter = n.iter,
                    thin = 40,
                    n.adapt=1000)
+Sys.time() - start.time
 
 ### Evaluate convergence before monitoring the variables below
 
 n.iter = 4000
-
+start.time <- Sys.time()
 zc1dYdX = coda.samples(jm1.b,variable.names = c("dYdVPD","dYdT","dYdSs","dYdSd","dYdP"),n.iter)
+Sys.time() - start.time
 
+start.time <- Sys.time()
 zc1X = coda.samples(jm1.b,variable.names = c("VPDant","TAant","PPTant","Sshall_ant","Sdeep_ant","PAR","Vrngant"),n.iter)
+Sys.time() - start.time
 
 n.iter = 5000
 
+start.time <- Sys.time()
 zc1Y = coda.samples(jm1.b,variable.names=c("Y.rep"),n.iter=n.iter)
+Sys.time() - start.time
