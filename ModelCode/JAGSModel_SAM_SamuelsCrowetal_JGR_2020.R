@@ -1,3 +1,7 @@
+#-------------------------------------------------------------------#
+# this branch aims at studying the original code (w/o modification) 
+#-------------------------------------------------------------------#
+
 model{
   ##Placeholder for initial part of data set. 
   for(i in 1:(Nstart-1)){

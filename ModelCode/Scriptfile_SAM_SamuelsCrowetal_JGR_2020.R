@@ -1,3 +1,7 @@
+#-------------------------------------------------------------------#
+# this branch aims at studying the original code (w/o modification) 
+#-------------------------------------------------------------------#
+
 ### This script file will allow the user to run the SAM model to evaluate controls on NEE or ET for 
 ### either the US-Vcp or US-Mpj site. The user should update the file to reflect the working directory,
 ### input data files, and flux of interest. Items that the user should change are indicated by “XXXX”.
