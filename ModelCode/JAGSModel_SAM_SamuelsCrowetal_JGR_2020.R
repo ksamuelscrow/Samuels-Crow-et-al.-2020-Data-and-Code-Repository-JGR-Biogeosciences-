@@ -91,10 +91,25 @@ for(i in Nstart:Nend){
   
   ## Calculate net sensitivities (derivative)
   
+  # dYdVPD[i] <- VPD    + 2*VPD^2*VPDant        + VPDxTA*TAant        + VPDxPPT*PPTant       + VPDXSshall*Sshall_ant     + VPDXSdeep*Sdeep_ant (ht opinion)
+  # dYdVPD[i] <- VPD    + 2*VPD^2*VPDant        + VPDxTA*TAant        + VPDxPPT*PPTant       + VPDXPAR*Sshall_ant     + VPDXSdeep*Sdeep_ant (actual)
   dYdVPD[i] <- beta1[1] + 2*beta1a[1]*VPDant[i] + beta2[1,1]*TAant[i] + beta2[2,1]*PPTant[i] + beta2[3,1]*Sshall_ant[i] + beta2[4,1]*Sdeep_ant[i]
+  
+  # dYdTA[i] <- TA      + 2*TA^2*TAant         + TAxVPD*VPDant        + TAxPPT*PPTant        + TAXSshall*Sshall_ant     + TAXSdeep*Sdeep_ant (ht opinion)
+  # dYdTA[i] <- TA      + 2*TA^2*TAant         + TAxVPD*VPDant        + TAxPPT*PPTant        + TAXSshall*Sshall_ant     + TAXSdeep*Sdeep_ant (actual w/o PAR)
+  # dYdTA[i] <- TA      + 2*TA^2*TAant         + TAxVPD*VPDant        + TAxPPT*PPTant        + TAXPAR*Sshall_ant        + TAXSshallow*Sdeep_ant (actual)
   dYdT[i]   <- beta1[2] + 2*beta1a[2]*TAant[i] + beta2[1,1]*VPDant[i] + beta2[5,1]*PPTant[i] + beta2[6,1]*Sshall_ant[i] + beta2[7,1]*Sdeep_ant[i]
+  
+  #? dYdP[i] <- P        + PxTA*TAant           + PxPPT*PPTant        + PXSshall*Sshall_ant      + PXSdeep*Sdeep_ant (ht opinion)
+  # dYdP[i] <- P        + VPDxPPT*VPDant       + TAxPPT*TAant        + PPTXPAR*Sshall_ant       + PPTXSshallow*Sshallow_ant (actual)
   dYdP[i]   <- beta1[3] + beta2[2,1]*VPDant[i] + beta2[5,1]*TAant[i] + beta2[8,1]*Sshall_ant[i] + beta2[9,1]*Sdeep_ant[i]
+  
+  #? dYdSs[i] <- Ss      + PxTA*TAant           + PxPPT*PPTant        + PXSshall*Sshall_ant      + PXSdeep*Sdeep_ant (ht opinion)
+  # dYdSs[i] <- PAR     + VPDxPAR*VPDant       + TAxPAR*TAant        + PPTXPAR*PPT_ant      + PARXSshallow*Sdeep_ant (actual)
   dYdSs[i]  <- beta1[4] + beta2[3,1]*VPDant[i] + beta2[6,1]*TAant[i] + beta2[8,1]*PPTant[i] + beta2[10,1]*Sdeep_ant[i]
+  
+  #? dYdP[i] <- P        + PxTA*TAant           + PxPPT*PPTant       + PXSshall*Sshall_ant      + PXSdeep*Sdeep_ant (ht opinion)
+  # dYdSd[i] <- Sshallow + VPDxSshallow*VPDant + TAxSshallow*TAant   + PPTXSshallow*Sshall_ant  + PARXSshallow*Sshall_ant (actual)
   dYdSd[i]  <- beta1[5] + beta2[4,1]*VPDant[i] + beta2[7,1]*TAant[i] + beta2[9,1]*PPTant[i] + beta2[10,1]*Sshall_ant[i]
   
   dYdX[i,1] <- dYdVPD[i]
