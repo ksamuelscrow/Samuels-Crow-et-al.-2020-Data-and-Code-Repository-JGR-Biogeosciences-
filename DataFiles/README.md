@@ -34,3 +34,6 @@ These files contain date information, flux measurements, and climate covariates 
 |VPD_F_max|9|Maximum Vapor Pressure Deficit (kPa)|
 <br/>
 
+**Indexing File:**<br/>
+This file indexes the variables for interaction calculations
+
