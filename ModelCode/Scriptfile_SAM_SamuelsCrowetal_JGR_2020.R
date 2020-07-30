@@ -79,7 +79,7 @@ n.adapt = 100 # adjust this number (and n.iter) as appropriate
 n.iter = 1000
 n.chains = 3
 
-jm1.b=jags.model("JAGS_Model_FluxData.R",
+jm1.b=jags.model("JAGSModel_SAM_SamuelsCrowetal_JGR_2020.R",
                  data=data,
                  n.chains=n.chains,
                  n.adapt=n.adapt,
