@@ -35,5 +35,5 @@ These files contain date information, flux measurements, and climate covariates 
 <br/>
 
 **Indexing File:**<br/>
-This file indexes the variables for interaction calculations
+The file **InteractionIND.csv** indexes the variables for interaction calculations
 
