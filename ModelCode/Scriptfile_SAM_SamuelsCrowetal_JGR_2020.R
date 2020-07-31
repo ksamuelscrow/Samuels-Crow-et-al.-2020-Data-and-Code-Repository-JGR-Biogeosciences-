@@ -6,7 +6,7 @@
 ### either the US-Vcp or US-Mpj site. The user should update the file to reflect the working directory,
 ### input data files, and flux of interest. Items that the user should change are indicated by “XXXX”.
 
-#Part 1: Load data, construct data list for JAGS model, generate initial values ----
+# Part 1: Load data, construct data list for JAGS model, generate initial values ----
 
 setwd("C:/Users/Owner/Dropbox/Samuelscrow_2020_JGR") # set to your working directory
 library(rjags) # install rjags if necessary
@@ -112,7 +112,7 @@ inits = list(list(beta0 = beta0, beta1 = beta1, beta1a = beta1a, beta2 = beta2, 
 
 #-------------------------------------------------------------------#
 
-#Part 2: Initialize JAGS Model ----
+# Part 2: Initialize JAGS Model ----
 
 n.adapt = 100 # adjust this number (and n.iter) as appropriate 
 n.iter = 1000
@@ -127,7 +127,7 @@ jm1.b=jags.model("./ModelCode/JAGSModel_SAM_SamuelsCrowetal_JGR_2020.R",
 Sys.time() - start.time
 #-------------------------------------------------------------------#
 
-#Part 3: Run JAGS Model
+# Part 3: Run JAGS Model ----
 
 load.module("dic")
 
@@ -159,3 +159,6 @@ n.iter = 5000
 start.time <- Sys.time()
 zc1Y = coda.samples(jm1.b,variable.names=c("Y.rep"),n.iter=n.iter)
 Sys.time() - start.time
+
+# Part 4: Analyze results ----
+
